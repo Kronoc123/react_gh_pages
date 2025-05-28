@@ -15,48 +15,48 @@ concurrency:
     cancel-in-progress: false
 
 jobs:
-    build:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Checkout
-                uses: actions/checkout@v4
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+          uses: actions/checkout@v4
 
-            - name: Setup Node.js
-                uses: actions/setup-node@v4
-                with:
-                    node-version: '20'
-                    cache: 'pnpm'
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+            node-version: '20'
+            cache: 'pnpm'
 
-            - name: Install pnpm
-                uses: pnpm/action-setup@v2
-                with:
-                    version: 8
-                    run_install: true
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+            version: 8
+            run_install: true
 
-            - name: Install terser (required by Vite for minification)
-                run: npm install --save-dev terser
+      - name: Install terser (required by Vite for minification)
+        run: npm install --save-dev terser
 
-            - name: Build
-                run: pnpm run build
+      - name: Build
+        run: pnpm run build
 
-            - name: Copy index.html to 404.html for SPA routing
-                run: cp dist/index.html dist/404.html
+      - name: Copy index.html to 404.html for SPA routing
+        run: cp dist/index.html dist/404.html
 
-            - name: Setup Pages
-                uses: actions/configure-pages@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
 
-            - name: Upload artifact
-                uses: actions/upload-pages-artifact@v3
-                with:
-                    path: './dist'
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+            path: './dist'
 
 deploy:
-    environment:
-        name: github-pages
-        url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-        - name: Deploy to GitHub Pages
-            id: deployment
-            uses: actions/deploy-pages@v4
+  environment:
+    name: github-pages
+    url: ${{ steps.deployment.outputs.page_url }}
+  runs-on: ubuntu-latest
+  needs: build
+  steps:
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
