@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
     plugins: [ react() ],
-    base: '/', // Use root for local dev, change to './' or repo name for GitHub Pages
+    base: process.env.NODE_ENV === 'production' ? '/react-gh-pages/' : '/',
     build: {
         outDir: 'dist',
         assetsDir: 'assets',
