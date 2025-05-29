@@ -1,18 +1,26 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
+// https://vitejs.dev/config/
 export default defineConfig({
     plugins: [ react() ],
-    base: '/react-gh-pages/',
+    base: process.env.NODE_ENV === 'production' ? '/react_gh_pages/' : '/',
     build: {
         outDir: 'dist',
         assetsDir: 'assets',
+        sourcemap: false,
+        minify: 'terser',
         rollupOptions: {
             output: {
-                assetFileNames: 'assets/[name].[hash].[ext]',
-                chunkFileNames: 'assets/[name].[hash].js',
-                entryFileNames: 'assets/[name].[hash].js',
+                manualChunks: {
+                    vendor: [ 'react', 'react-dom' ],
+                    icons: [ 'lucide-react' ]
+                }
             }
         }
+    },
+    server: {
+        port: 3001,
+        open: true
     }
 })
