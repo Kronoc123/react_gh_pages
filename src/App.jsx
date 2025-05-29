@@ -78,25 +78,18 @@ const App = () => {
         };
 
         return (
-            <span className={ `px-3 py-1 rounded-full text-xs font-medium border ${ badges[ status ] } backdrop-blur-sm` }>
+            <span className={ `px-4 py-1 rounded-2xl text-sm font-medium border ${ badges[ status ] }` }>
                 { status.charAt(0).toUpperCase() + status.slice(1) }
             </span>
         );
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black">
-            {/* Animated background elements */ }
-            <div className="fixed inset-0 overflow-hidden pointer-events-none">
-                <div className="absolute -top-40 -right-40 w-80 h-80 bg-yellow-500/10 rounded-full blur-3xl animate-pulse"></div>
-                <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-yellow-600/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-yellow-400/5 rounded-full blur-3xl animate-pulse delay-500"></div>
-            </div>
-
+        <div className="min-h-screen bg-black">
             <div className="relative z-10 container mx-auto px-4 py-8">
                 {/* Header */ }
                 <div className="text-center mb-12">
-                    <h1 className="text-5xl font-bold bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent mb-4">
+                    <h1 className="text-5xl font-bold text-yellow-400 mb-4">
                         Portfolio
                     </h1>
                     <p className="text-gray-400 text-lg max-w-2xl mx-auto">
@@ -114,7 +107,7 @@ const App = () => {
                             placeholder="Search cryptocurrencies..."
                             value={ searchTerm }
                             onChange={ (e) => setSearchTerm(e.target.value) }
-                            className="w-full pl-10 pr-4 py-3 bg-black/50 border border-yellow-500/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-yellow-500/50 focus:ring-2 focus:ring-yellow-500/20 backdrop-blur-sm transition-all duration-300"
+                            className="w-full pl-10 pr-4 py-3 bg-black/10 border border-yellow-500/30 rounded-xl text-white placeholder-gray-300 focus:outline-none focus:border-yellow-500/50 focus:ring-2 focus:ring-yellow-500/20 transition-all duration-300"
                         />
                     </div>
 
@@ -124,7 +117,7 @@ const App = () => {
                         <select
                             value={ filterStatus }
                             onChange={ (e) => setFilterStatus(e.target.value) }
-                            className="pl-10 pr-8 py-3 bg-black/50 border border-yellow-500/20 rounded-xl text-white focus:outline-none focus:border-yellow-500/50 focus:ring-2 focus:ring-yellow-500/20 backdrop-blur-sm transition-all duration-300 appearance-none cursor-pointer"
+                            className="pl-10 pr-8 py-3 bg-black/10 border border-yellow-500/30 rounded-xl text-white focus:outline-none focus:border-yellow-500/50 focus:ring-2 focus:ring-yellow-500/20 transition-all duration-300 appearance-none cursor-pointer"
                         >
                             <option value="all">All Status</option>
                             <option value="bullish">Bullish</option>
@@ -135,16 +128,16 @@ const App = () => {
                 </div>
 
                 {/* Table */ }
-                <div className="bg-black/30 backdrop-blur-xl rounded-2xl border border-yellow-500/20 overflow-hidden shadow-2xl">
+                <div className="bg-black/40 rounded-2xl border border-yellow-500/30 overflow-hidden shadow-2xl">
                     <div className="overflow-x-auto">
                         <table className="w-full">
                             <thead>
-                                <tr className="bg-gradient-to-r from-yellow-500/10 to-yellow-600/10 border-b border-yellow-500/20">
+                                <tr className="bg-black/10 border-b border-yellow-500/30">
                                     <th
                                         className="px-6 py-4 text-left cursor-pointer hover:bg-yellow-500/5 transition-colors duration-200"
                                         onClick={ () => handleSort('name') }
                                     >
-                                        <div className="flex items-center space-x-2 text-yellow-400 font-semibold">
+                                        <div className="flex items-center space-x-2 text-white font-semibold">
                                             <span>Asset</span>
                                             { getSortIcon('name') }
                                         </div>
@@ -153,7 +146,7 @@ const App = () => {
                                         className="px-6 py-4 text-right cursor-pointer hover:bg-yellow-500/5 transition-colors duration-200"
                                         onClick={ () => handleSort('price') }
                                     >
-                                        <div className="flex items-center justify-end space-x-2 text-yellow-400 font-semibold">
+                                        <div className="flex items-center justify-end space-x-2 text-white font-semibold">
                                             <DollarSign className="w-4 h-4" />
                                             <span>Price</span>
                                             { getSortIcon('price') }
@@ -163,7 +156,7 @@ const App = () => {
                                         className="px-6 py-4 text-right cursor-pointer hover:bg-yellow-500/5 transition-colors duration-200"
                                         onClick={ () => handleSort('change') }
                                     >
-                                        <div className="flex items-center justify-end space-x-2 text-yellow-400 font-semibold">
+                                        <div className="flex items-center justify-end space-x-2 text-white font-semibold">
                                             <TrendingUp className="w-4 h-4" />
                                             <span>24h Change</span>
                                             { getSortIcon('change') }
@@ -173,7 +166,7 @@ const App = () => {
                                         className="px-6 py-4 text-center cursor-pointer hover:bg-yellow-500/5 transition-colors duration-200"
                                         onClick={ () => handleSort('status') }
                                     >
-                                        <div className="flex items-center justify-center space-x-2 text-yellow-400 font-semibold">
+                                        <div className="flex items-center justify-center space-x-2 text-white font-semibold">
                                             <Calendar className="w-4 h-4" />
                                             <span>Status</span>
                                             { getSortIcon('status') }
@@ -185,15 +178,15 @@ const App = () => {
                                 { filteredAndSortedData.map((item, index) => (
                                     <tr
                                         key={ item.id }
-                                        className="border-b border-gray-800/50 hover:bg-yellow-500/5 transition-all duration-300 group"
+                                        className="border-b border-yellow-500/20 hover:bg-yellow-500/20 transition-all duration-300 group"
                                     >
                                         <td className="px-6 py-4">
                                             <div className="flex items-center space-x-3">
-                                                <div className="w-10 h-10 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center text-black font-bold text-sm">
+                                                <div className="w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center text-black font-bold text-sm">
                                                     { item.symbol.charAt(0) }
                                                 </div>
                                                 <div>
-                                                    <div className="text-white font-medium group-hover:text-yellow-400 transition-colors duration-200">
+                                                    <div className="text-gray-200 font-medium group-hover:text-yellow-400 transition-colors duration-200">
                                                         { item.name }
                                                     </div>
                                                     <div className="text-gray-400 text-sm font-mono">
@@ -203,7 +196,7 @@ const App = () => {
                                             </div>
                                         </td>
                                         <td className="px-6 py-4 text-right">
-                                            <div className="text-white font-mono text-lg group-hover:text-yellow-400 transition-colors duration-200">
+                                            <div className="text-gray-200 font-mono text-lg group-hover:text-yellow-400 transition-colors duration-200">
                                                 { formatPrice(item.price) }
                                             </div>
                                         </td>
@@ -232,19 +225,19 @@ const App = () => {
 
                 {/* Stats Footer */ }
                 <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div className="bg-black/30 backdrop-blur-xl rounded-xl border border-yellow-500/20 p-6 text-center">
+                    <div className="bg-black/20 rounded-xl border border-yellow-500/30 p-6 text-center">
                         <div className="text-3xl font-bold text-yellow-400 mb-2">
                             { filteredAndSortedData.length }
                         </div>
                         <div className="text-gray-400">Assets Tracked</div>
                     </div>
-                    <div className="bg-black/30 backdrop-blur-xl rounded-xl border border-yellow-500/20 p-6 text-center">
+                    <div className="bg-black/20 rounded-xl border border-yellow-500/30 p-6 text-center">
                         <div className="text-3xl font-bold text-green-400 mb-2">
                             { filteredAndSortedData.filter(item => item.change > 0).length }
                         </div>
                         <div className="text-gray-400">Gainers</div>
                     </div>
-                    <div className="bg-black/30 backdrop-blur-xl rounded-xl border border-yellow-500/20 p-6 text-center">
+                    <div className="bg-black/20 rounded-xl border border-yellow-500/30 p-6 text-center">
                         <div className="text-3xl font-bold text-red-400 mb-2">
                             { filteredAndSortedData.filter(item => item.change < 0).length }
                         </div>
