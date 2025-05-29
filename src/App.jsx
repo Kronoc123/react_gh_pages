@@ -1,23 +1,13 @@
 import React, { useState, useMemo } from 'react';
 import { Search, TrendingUp, TrendingDown, DollarSign, Calendar, Filter, ChevronUp, ChevronDown } from 'lucide-react';
+import cryptoData from './data/cryptoData.json';
 
 const App = () => {
     const [ searchTerm, setSearchTerm ] = useState('');
     const [ sortField, setSortField ] = useState('name');
     const [ sortDirection, setSortDirection ] = useState('asc');
     const [ filterStatus, setFilterStatus ] = useState('all');
-
-    // Sample data for the table
-    const [ data ] = useState([
-        { id: 1, name: 'Bitcoin', symbol: 'BTC', price: 67420.50, change: 5.23, status: 'bullish', lastUpdate: '2025-05-28' },
-        { id: 2, name: 'Ethereum', symbol: 'ETH', price: 3850.75, change: -2.14, status: 'bearish', lastUpdate: '2025-05-28' },
-        { id: 3, name: 'Solana', symbol: 'SOL', price: 189.32, change: 8.67, status: 'bullish', lastUpdate: '2025-05-28' },
-        { id: 4, name: 'Cardano', symbol: 'ADA', price: 0.4521, change: -1.89, status: 'bearish', lastUpdate: '2025-05-28' },
-        { id: 5, name: 'Polkadot', symbol: 'DOT', price: 7.84, change: 3.45, status: 'neutral', lastUpdate: '2025-05-28' },
-        { id: 6, name: 'Chainlink', symbol: 'LINK', price: 15.67, change: -0.78, status: 'neutral', lastUpdate: '2025-05-28' },
-        { id: 7, name: 'Avalanche', symbol: 'AVAX', price: 28.91, change: 12.34, status: 'bullish', lastUpdate: '2025-05-28' },
-        { id: 8, name: 'Polygon', symbol: 'MATIC', price: 0.5847, change: -4.23, status: 'bearish', lastUpdate: '2025-05-28' },
-    ]);
+    const [ data ] = useState(cryptoData.cryptocurrencies);
 
     const handleSort = (field) => {
         if (sortField === field) {
@@ -107,10 +97,10 @@ const App = () => {
                 {/* Header */ }
                 <div className="text-center mb-12">
                     <h1 className="text-5xl font-bold bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent mb-4">
-                        Golden Portfolio
+                        Portfolio
                     </h1>
                     <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-                        Track your premium cryptocurrency investments with elegance and precision
+
                     </p>
                 </div>
 

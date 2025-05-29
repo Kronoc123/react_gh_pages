@@ -20,11 +20,6 @@ export default {
                     900: '#713f12',
                 }
             },
-            animation: {
-                'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                'fade-in': 'fadeIn 0.5s ease-in-out',
-                'slide-in': 'slideIn 0.3s ease-out',
-            },
             keyframes: {
                 fadeIn: {
                     '0%': { opacity: '0', transform: 'translateY(10px)' },

@@ -32,9 +32,6 @@ jobs:
         with:
           node-version: '20'
           cache: 'pnpm'
-          
-      - name: Install terser (required by Vite for minification)
-        run: npm install --save-dev terser
 
       - name: Build
         run: pnpm run build

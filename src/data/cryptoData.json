@@ -1,0 +1,382 @@
+{
+    "cryptocurrencies": [
+        {
+            "id": 1,
+            "name": "Bitcoin",
+            "symbol": "BTC",
+            "price": 67420.50,
+            "change": 5.23,
+            "status": "bullish",
+            "lastUpdate": "2025-05-28"
+        },
+        {
+            "id": 2,
+            "name": "Ethereum",
+            "symbol": "ETH",
+            "price": 3850.75,
+            "change": -2.14,
+            "status": "bearish",
+            "lastUpdate": "2025-05-29"
+        },
+        {
+            "id": 3,
+            "name": "Solana",
+            "symbol": "SOL",
+            "price": 189.32,
+            "change": 8.67,
+            "status": "bullish",
+            "lastUpdate": "2025-05-28"
+        },
+        {
+            "id": 4,
+            "name": "Cardano",
+            "symbol": "ADA",
+            "price": 0.4521,
+            "change": -1.89,
+            "status": "bearish",
+            "lastUpdate": "2025-05-28"
+        },
+        {
+            "id": 5,
+            "name": "Polkadot",
+            "symbol": "DOT",
+            "price": 7.84,
+            "change": 3.45,
+            "status": "neutral",
+            "lastUpdate": "2025-05-28"
+        },
+        {
+            "id": 6,
+            "name": "Chainlink",
+            "symbol": "LINK",
+            "price": 15.67,
+            "change": -0.78,
+            "status": "neutral",
+            "lastUpdate": "2025-05-28"
+        },
+        {
+            "id": 7,
+            "name": "Avalanche",
+            "symbol": "AVAX",
+            "price": 28.91,
+            "change": 12.34,
+            "status": "bullish",
+            "lastUpdate": "2025-05-28"
+        },
+        {
+            "id": 8,
+            "name": "Polygon",
+            "symbol": "MATIC",
+            "price": 0.5847,
+            "change": -4.23,
+            "status": "bearish",
+            "lastUpdate": "2025-05-28"
+        },
+        {
+            "id": 9,
+            "name": "Uniswap",
+            "symbol": "UNI",
+            "price": 7.45,
+            "change": 2.34,
+            "status": "bullish",
+            "lastUpdate": "2025-05-28"
+        },
+        {
+            "id": 10,
+            "name": "Aave",
+            "symbol": "AAVE",
+            "price": 89.32,
+            "change": -1.45,
+            "status": "bearish",
+            "lastUpdate": "2025-05-28"
+        },
+        {
+            "id": 11,
+            "name": "Cosmos",
+            "symbol": "ATOM",
+            "price": 12.76,
+            "change": 3.21,
+            "status": "bullish",
+            "lastUpdate": "2025-05-28"
+        },
+        {
+            "id": 12,
+            "name": "Algorand",
+            "symbol": "ALGO",
+            "price": 0.234,
+            "change": -0.67,
+            "status": "neutral",
+            "lastUpdate": "2025-05-28"
+        },
+        {
+            "id": 13,
+            "name": "VeChain",
+            "symbol": "VET",
+            "price": 0.089,
+            "change": 4.23,
+            "status": "bullish",
+            "lastUpdate": "2025-05-28"
+        },
+        {
+            "id": 14,
+            "name": "Filecoin",
+            "symbol": "FIL",
+            "price": 6.78,
+            "change": -2.34,
+            "status": "bearish",
+            "lastUpdate": "2025-05-28"
+        },
+        {
+            "id": 15,
+            "name": "Tezos",
+            "symbol": "XTZ",
+            "price": 1.45,
+            "change": 1.23,
+            "status": "neutral",
+            "lastUpdate": "2025-05-28"
+        },
+        {
+            "id": 16,
+            "name": "Stellar",
+            "symbol": "XLM",
+            "price": 0.156,
+            "change": 3.45,
+            "status": "bullish",
+            "lastUpdate": "2025-05-28"
+        },
+        {
+            "id": 17,
+            "name": "Near Protocol",
+            "symbol": "NEAR",
+            "price": 4.32,
+            "change": -1.67,
+            "status": "bearish",
+            "lastUpdate": "2025-05-28"
+        },
+        {
+            "id": 18,
+            "name": "Hedera",
+            "symbol": "HBAR",
+            "price": 0.078,
+            "change": 5.43,
+            "status": "bullish",
+            "lastUpdate": "2025-05-28"
+        },
+        {
+            "id": 19,
+            "name": "Theta",
+            "symbol": "THETA",
+            "price": 1.23,
+            "change": -0.89,
+            "status": "neutral",
+            "lastUpdate": "2025-05-28"
+        },
+        {
+            "id": 20,
+            "name": "Fantom",
+            "symbol": "FTM",
+            "price": 0.456,
+            "change": 7.89,
+            "status": "bullish",
+            "lastUpdate": "2025-05-28"
+        },
+        {
+            "id": 21,
+            "name": "The Graph",
+            "symbol": "GRT",
+            "price": 0.167,
+            "change": -3.21,
+            "status": "bearish",
+            "lastUpdate": "2025-05-28"
+        },
+        {
+            "id": 22,
+            "name": "Harmony",
+            "symbol": "ONE",
+            "price": 0.023,
+            "change": 2.34,
+            "status": "neutral",
+            "lastUpdate": "2025-05-28"
+        },
+        {
+            "id": 23,
+            "name": "Elrond",
+            "symbol": "EGLD",
+            "price": 45.67,
+            "change": 4.56,
+            "status": "bullish",
+            "lastUpdate": "2025-05-28"
+        },
+        {
+            "id": 24,
+            "name": "Enjin",
+            "symbol": "ENJ",
+            "price": 0.678,
+            "change": -1.23,
+            "status": "bearish",
+            "lastUpdate": "2025-05-28"
+        },
+        {
+            "id": 25,
+            "name": "Zilliqa",
+            "symbol": "ZIL",
+            "price": 0.034,
+            "change": 3.45,
+            "status": "bullish",
+            "lastUpdate": "2025-05-28"
+        },
+        {
+            "id": 26,
+            "name": "Waves",
+            "symbol": "WAVES",
+            "price": 2.34,
+            "change": -2.67,
+            "status": "bearish",
+            "lastUpdate": "2025-05-28"
+        },
+        {
+            "id": 27,
+            "name": "Kusama",
+            "symbol": "KSM",
+            "price": 34.56,
+            "change": 5.67,
+            "status": "bullish",
+            "lastUpdate": "2025-05-28"
+        },
+        {
+            "id": 28,
+            "name": "Decentraland",
+            "symbol": "MANA",
+            "price": 0.789,
+            "change": -1.45,
+            "status": "neutral",
+            "lastUpdate": "2025-05-28"
+        },
+        {
+            "id": 29,
+            "name": "Basic Attention Token",
+            "symbol": "BAT",
+            "price": 0.345,
+            "change": 2.34,
+            "status": "bullish",
+            "lastUpdate": "2025-05-28"
+        },
+        {
+            "id": 30,
+            "name": "Loopring",
+            "symbol": "LRC",
+            "price": 0.234,
+            "change": -3.45,
+            "status": "bearish",
+            "lastUpdate": "2025-05-28"
+        },
+        {
+            "id": 31,
+            "name": "Sushi",
+            "symbol": "SUSHI",
+            "price": 1.45,
+            "change": 4.56,
+            "status": "bullish",
+            "lastUpdate": "2025-05-28"
+        },
+        {
+            "id": 32,
+            "name": "Compound",
+            "symbol": "COMP",
+            "price": 56.78,
+            "change": -2.34,
+            "status": "bearish",
+            "lastUpdate": "2025-05-28"
+        },
+        {
+            "id": 33,
+            "name": "Synthetix",
+            "symbol": "SNX",
+            "price": 3.45,
+            "change": 1.23,
+            "status": "neutral",
+            "lastUpdate": "2025-05-28"
+        },
+        {
+            "id": 34,
+            "name": "Yearn.finance",
+            "symbol": "YFI",
+            "price": 8945.67,
+            "change": 6.78,
+            "status": "bullish",
+            "lastUpdate": "2025-05-28"
+        },
+        {
+            "id": 35,
+            "name": "Maker",
+            "symbol": "MKR",
+            "price": 1234.56,
+            "change": -4.56,
+            "status": "bearish",
+            "lastUpdate": "2025-05-28"
+        },
+        {
+            "id": 36,
+            "name": "Curve DAO Token",
+            "symbol": "CRV",
+            "price": 0.678,
+            "change": 3.45,
+            "status": "bullish",
+            "lastUpdate": "2025-05-28"
+        },
+        {
+            "id": 37,
+            "name": "Arweave",
+            "symbol": "AR",
+            "price": 12.34,
+            "change": -1.23,
+            "status": "neutral",
+            "lastUpdate": "2025-05-28"
+        },
+        {
+            "id": 38,
+            "name": "Render Token",
+            "symbol": "RNDR",
+            "price": 2.45,
+            "change": 5.67,
+            "status": "bullish",
+            "lastUpdate": "2025-05-28"
+        },
+        {
+            "id": 39,
+            "name": "Internet Computer",
+            "symbol": "ICP",
+            "price": 5.67,
+            "change": -2.34,
+            "status": "bearish",
+            "lastUpdate": "2025-05-28"
+        },
+        {
+            "id": 40,
+            "name": "THORChain",
+            "symbol": "RUNE",
+            "price": 4.56,
+            "change": 3.45,
+            "status": "bullish",
+            "lastUpdate": "2025-05-28"
+        },
+        {
+            "id": 41,
+            "name": "Oasis Network",
+            "symbol": "ROSE",
+            "price": 0.123,
+            "change": -1.67,
+            "status": "neutral",
+            "lastUpdate": "2025-05-28"
+        },
+        {
+            "id": 42,
+            "name": "Stacks",
+            "symbol": "STX",
+            "price": 1.23,
+            "change": 4.56,
+            "status": "bullish",
+            "lastUpdate": "2025-05-28"
+        }
+    ]
+}
